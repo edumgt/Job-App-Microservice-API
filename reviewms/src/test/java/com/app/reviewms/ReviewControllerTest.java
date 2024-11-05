@@ -1,8 +1,8 @@
 package com.app.reviewms;
 
-import com.app.reviewms.review.Review;
-import com.app.reviewms.review.ReviewRepository;
-import com.app.reviewms.review.ReviewService;
+import com.app.reviewms.review.entity.Review;
+import com.app.reviewms.review.repository.ReviewRepository;
+import com.app.reviewms.review.service.ReviewService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -13,9 +13,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;

@@ -1,6 +1,7 @@
-package com.app.jobms.job;
+package com.app.jobms.job.service;
 
 import com.app.jobms.job.dto.JobWithCompanyDTO;
+import com.app.jobms.job.entity.Job;
 
 import java.util.List;
 

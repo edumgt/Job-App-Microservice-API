@@ -3,8 +3,8 @@ package com.app.companyms;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
-import com.app.companyms.company.Company;
-import com.app.companyms.company.CompanyRepository;
+import com.app.companyms.company.entity.Company;
+import com.app.companyms.company.repository.CompanyRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

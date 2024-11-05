@@ -123,6 +123,20 @@ services:
       - postgres
     environment:
       - SPRING_PROFILES_ACTIVE=docker
+  security:
+    image: yash1thyerra/security
+    container_name: security
+    ports:
+      - 9090:9090
+    depends_on:
+      - servicereg
+    networks:
+      - microservice-network
+      - postgres
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - DB_DEFAULT_USERNAME=${DB_DEFAULT_USERNAME}
+      - DB_DEFAULT_PASSWORD=${DB_DEFAULT_PASSWORD}
 networks:
   microservice-network:
     driver: bridge

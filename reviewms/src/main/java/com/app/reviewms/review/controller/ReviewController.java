@@ -1,6 +1,8 @@
-package com.app.reviewms.review;
+package com.app.reviewms.review.controller;
 
 
+import com.app.reviewms.review.service.ReviewService;
+import com.app.reviewms.review.entity.Review;
 import com.app.reviewms.review.messaging.ReviewMessageProducer;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

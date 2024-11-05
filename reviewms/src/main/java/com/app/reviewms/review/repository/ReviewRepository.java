@@ -1,5 +1,6 @@
-package com.app.reviewms.review;
+package com.app.reviewms.review.repository;
 
+import com.app.reviewms.review.entity.Review;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

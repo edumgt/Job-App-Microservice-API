@@ -1,5 +1,6 @@
-package com.app.companyms.company;
+package com.app.companyms.company.repository;
 
+import com.app.companyms.company.entity.Company;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

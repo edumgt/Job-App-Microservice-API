@@ -1,8 +1,10 @@
-package com.app.jobms.job;
+package com.app.jobms.job.controller;
 
 
 
+import com.app.jobms.job.service.JobService;
 import com.app.jobms.job.dto.JobWithCompanyDTO;
+import com.app.jobms.job.entity.Job;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

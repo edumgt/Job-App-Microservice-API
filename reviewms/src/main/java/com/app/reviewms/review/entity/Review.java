@@ -1,4 +1,4 @@
-package com.app.reviewms.review;
+package com.app.reviewms.review.entity;
 
 
 

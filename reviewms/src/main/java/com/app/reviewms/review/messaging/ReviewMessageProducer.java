@@ -1,7 +1,7 @@
 package com.app.reviewms.review.messaging;
 
 
-import com.app.reviewms.review.Review;
+import com.app.reviewms.review.entity.Review;
 import com.app.reviewms.review.dto.ReviewMessage;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;

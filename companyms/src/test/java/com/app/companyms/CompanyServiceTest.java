@@ -3,9 +3,9 @@ package com.app.companyms;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
-import com.app.companyms.company.Company;
-import com.app.companyms.company.CompanyRepository;
-import com.app.companyms.company.CompanyService;
+import com.app.companyms.company.entity.Company;
+import com.app.companyms.company.repository.CompanyRepository;
+import com.app.companyms.company.service.CompanyService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

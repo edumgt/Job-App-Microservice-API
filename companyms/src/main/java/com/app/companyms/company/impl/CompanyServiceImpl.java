@@ -1,9 +1,9 @@
 package com.app.companyms.company.impl;
 
 
-import com.app.companyms.company.Company;
-import com.app.companyms.company.CompanyRepository;
-import com.app.companyms.company.CompanyService;
+import com.app.companyms.company.entity.Company;
+import com.app.companyms.company.repository.CompanyRepository;
+import com.app.companyms.company.service.CompanyService;
 import com.app.companyms.company.clients.ReviewClient;
 import com.app.companyms.company.dto.ReviewMessage;
 import jakarta.ws.rs.NotFoundException;

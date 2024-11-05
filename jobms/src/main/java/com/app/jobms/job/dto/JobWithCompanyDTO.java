@@ -1,6 +1,5 @@
 package com.app.jobms.job.dto;
 
-import com.app.jobms.job.Job;
 import com.app.jobms.job.external.Company;
 import com.app.jobms.job.external.Review;
 

@@ -1,5 +1,6 @@
-package com.app.companyms.company;
+package com.app.companyms.company.service;
 
+import com.app.companyms.company.entity.Company;
 import com.app.companyms.company.dto.ReviewMessage;
 
 import java.util.List;

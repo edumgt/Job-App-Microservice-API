@@ -1,7 +1,7 @@
 package com.app.companyms.company.messaging;
 
 
-import com.app.companyms.company.CompanyService;
+import com.app.companyms.company.service.CompanyService;
 import com.app.companyms.company.dto.ReviewMessage;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;

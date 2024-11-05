@@ -1,4 +1,6 @@
-package com.app.reviewms.review;
+package com.app.reviewms.review.service;
+
+import com.app.reviewms.review.entity.Review;
 
 import java.util.List;
 

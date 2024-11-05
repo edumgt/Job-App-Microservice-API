@@ -1,4 +1,4 @@
-package com.app.jobms.job;
+package com.app.jobms.job.entity;
 
 import jakarta.persistence.*;
 //import org.springframework.boot.autoconfigure.web.WebProperties;

@@ -1,9 +1,7 @@
-package com.app.companyms.company;
+package com.app.companyms.company.entity;
 
 
 import jakarta.persistence.*;
-
-import java.util.List;
 
 @Entity
 public class Company {

@@ -3,9 +3,9 @@ package com.app.jobms;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
-import com.app.jobms.job.Job;
-import com.app.jobms.job.JobRepository;
-import com.app.jobms.job.JobService;
+import com.app.jobms.job.entity.Job;
+import com.app.jobms.job.repository.JobRepository;
+import com.app.jobms.job.service.JobService;
 import com.app.jobms.job.dto.JobWithCompanyDTO;
 import com.app.jobms.job.external.Company;
 import org.junit.jupiter.api.BeforeEach;

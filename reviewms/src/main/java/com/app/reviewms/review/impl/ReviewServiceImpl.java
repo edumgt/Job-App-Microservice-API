@@ -1,13 +1,12 @@
 package com.app.reviewms.review.impl;
 
 
-import com.app.reviewms.review.Review;
-import com.app.reviewms.review.ReviewRepository;
-import com.app.reviewms.review.ReviewService;
+import com.app.reviewms.review.entity.Review;
+import com.app.reviewms.review.repository.ReviewRepository;
+import com.app.reviewms.review.service.ReviewService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 
 @Service

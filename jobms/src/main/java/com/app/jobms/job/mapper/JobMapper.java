@@ -1,7 +1,7 @@
 package com.app.jobms.job.mapper;
 
 
-import com.app.jobms.job.Job;
+import com.app.jobms.job.entity.Job;
 import com.app.jobms.job.dto.JobWithCompanyDTO;
 import com.app.jobms.job.external.Company;
 import com.app.jobms.job.external.Review;

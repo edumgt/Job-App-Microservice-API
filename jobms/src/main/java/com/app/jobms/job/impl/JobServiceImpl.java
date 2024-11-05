@@ -1,9 +1,9 @@
 package com.app.jobms.job.impl;
 
 
-import com.app.jobms.job.Job;
-import com.app.jobms.job.JobRepository;
-import com.app.jobms.job.JobService;
+import com.app.jobms.job.entity.Job;
+import com.app.jobms.job.repository.JobRepository;
+import com.app.jobms.job.service.JobService;
 
 import com.app.jobms.job.clients.CompanyClient;
 import com.app.jobms.job.clients.ReviewClient;
@@ -11,9 +11,7 @@ import com.app.jobms.job.dto.JobWithCompanyDTO;
 import com.app.jobms.job.external.Company;
 import com.app.jobms.job.external.Review;
 import com.app.jobms.job.mapper.JobMapper;
-import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
-import io.github.resilience4j.retry.annotation.Retry;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

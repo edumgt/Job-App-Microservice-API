@@ -1,7 +1,7 @@
 package com.app.reviewms;
 
-import com.app.reviewms.review.Review;
-import com.app.reviewms.review.ReviewRepository;
+import com.app.reviewms.review.entity.Review;
+import com.app.reviewms.review.repository.ReviewRepository;
 import com.app.reviewms.review.impl.ReviewServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
