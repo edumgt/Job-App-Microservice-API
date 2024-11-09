@@ -86,10 +86,10 @@ The system uses **PostgreSQL** to persist user credentials and other data, inclu
 
 **PgAdmin** is used for managing the PostgreSQL database. It provides a user-friendly web interface for viewing and manipulating data, which helps in database administration tasks.
     
--   **Containerized**: The entire system is containerized using Docker and orchestrated using Docker Compose, making it easy to set up, deploy, and scale the application.
+### 12. **Containerized**: The entire system is containerized using Docker and orchestrated using Docker Compose, making it easy to set up, deploy, and scale the application.
 ![dockerizing](https://github.com/user-attachments/assets/163254b5-6f70-4bb2-be94-805b04b9f71e)
 
--   **Deployment**: Minikube(Kubernetes Dev Environment)
+### 13. **Deployment**: Minikube(Kubernetes Dev Environment)
     Kubernetes Architecture
 ![kubernetes](https://github.com/user-attachments/assets/bdd98b13-ee1e-4f0c-9cd2-854e601ee00f)
 
