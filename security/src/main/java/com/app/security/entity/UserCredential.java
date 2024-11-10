@@ -7,6 +7,8 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.*;
 
+import java.util.List;
+
 @Entity
 public class UserCredential {
     @Id
@@ -15,7 +17,15 @@ public class UserCredential {
     private String username;
     private String password;
     private String email;
+    private List<String> roles;
 
+    public List<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<String> roles) {
+        this.roles = roles;
+    }
 
     public int getId() {
         return id;

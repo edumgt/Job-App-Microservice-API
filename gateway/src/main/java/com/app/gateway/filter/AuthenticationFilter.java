@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 @Component
-public class AuthenticationFilter extends AbstractGatewayFilterFactory<AuthenticationFilter.config> {
+public class AuthenticationFilter extends AbstractGatewayFilterFactory<AuthenticationFilter.Config> {
     public AuthenticationFilter() {
-        super(config.class);
+        super(Config.class);
     }
 
     @Autowired
@@ -20,7 +20,7 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
     @Autowired
     private RouteValidator routeValidator;
     @Override
-    public GatewayFilter apply(config config) {
+    public GatewayFilter apply(Config config) {
         return (exchange, chain) -> {
             if(routeValidator.isSecured.test(exchange.getRequest())){
 
@@ -33,6 +33,13 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
                     authHeader = authHeader.substring(7);
 
                 }
+                try{
+                    template.getForObject("https://SECURITY/user/validate?token"+authHeader,String.class);
+                }
+                catch(Exception e){
+                    System.out.println("Unauthorized access");
+                    throw new RuntimeException("Unauthorized access to application");
+                }
                 
 
             }
@@ -42,9 +49,8 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
         };
     }
 
-    public static class config {
+    public static class Config {
 
-        // Configuration is in the progress.
 
     }
 }

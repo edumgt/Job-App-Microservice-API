@@ -5,6 +5,7 @@ import com.app.companyms.company.entity.Company;
 import com.app.companyms.company.service.CompanyService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +21,7 @@ public class CompanyController {
         this.companyService = companyService;
     }
 
+
     @GetMapping
     public ResponseEntity<List<Company>> getAllCompanies(){
         return new ResponseEntity<>(companyService.getAllCompanies(), HttpStatus.OK);
@@ -33,7 +35,7 @@ public class CompanyController {
         }
         return new ResponseEntity<>("Can't Found any Company with that id",HttpStatus.NOT_FOUND);
     }
-
+    @PreAuthorize("hasRole('MANAGER')")
     @PutMapping("/{id}")
     public ResponseEntity<String> updateCompany(@PathVariable Long id,@RequestBody Company updatedCompany){
         Boolean updated = companyService.updateCompany(id,updatedCompany);
@@ -42,7 +44,7 @@ public class CompanyController {
         }
         return new ResponseEntity<>("Can't find",HttpStatus.NOT_ACCEPTABLE);
     }
-
+    @PreAuthorize("hasRole('MANAGER')")
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteCompany(@PathVariable Long id){
         Boolean isDeleted = companyService.deleteCompany(id);
@@ -53,7 +55,7 @@ public class CompanyController {
 
         }
     }
-
+    @PreAuthorize("hasRole('MANAGER')")
     @PostMapping
     public ResponseEntity<String> addCompany(@RequestBody Company newCompany){
         try{

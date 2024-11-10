@@ -7,6 +7,7 @@ import com.app.jobms.job.dto.JobWithCompanyDTO;
 import com.app.jobms.job.entity.Job;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,6 +30,7 @@ public class JobController {
         return ResponseEntity.ok(jobService.findAll());
     }
 
+    @PreAuthorize("hasRole('MANAGER')")
     @PostMapping
     public ResponseEntity<String> createJob(@RequestBody Job job){
         jobService.createJob(job);
@@ -48,6 +50,7 @@ public class JobController {
         }
     }
 
+    @PreAuthorize("hasRole('MANAGER')")
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteJob(@PathVariable Long id){
         Boolean x = jobService.removeJob(id);
@@ -60,6 +63,7 @@ public class JobController {
     }
 
 
+    @PreAuthorize("hasRole('MANAGER')")
     @PutMapping("/{id}")
     public ResponseEntity<String> updateJob(@PathVariable Long id,@RequestBody Job udpatedJob){
         Boolean updated = jobService.updateJob(id,udpatedJob);
